@@ -28,11 +28,11 @@
 	margin-right: 12px;
 }
 
-.ow-navigation .navbar-brand h3 img {
+/*.ow-navigation .navbar-brand h3 img {
 	width: 166px;
 	height: 78px;
-}
-/*.ow-navigation .navbar-brand  h3 {
+}*/
+.ow-navigation .navbar-brand  h3 {
 	font-family: 'Dancing Script', cursive;
 	font-size: 32px;
 	font-weight: 700;
@@ -40,7 +40,7 @@
 	letter-spacing: -0.64px;
 	text-transform: capitalize;
 	margin-top: 0;
-	margin-bottom: 0;*/
+	margin-bottom: 0;
 }
 .ow-navigation .nav.navbar-nav > li {
 	margin: 0 26px;
