@@ -12,6 +12,19 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount =true).AddRoles<IdentityRole>().AddRoleManager < RoleManager < IdentityRole >> ().AddEntityFrameworkStores < ApplicationDbContext > ();
 
+
+//Shopping Cart - Step 1
+//Register Session - must go after .AddControllersWithViews();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(20);//how long the session will be stored in memory
+    options.Cookie.HttpOnly = true; //allow us to set cookie options
+    options.Cookie.IsEssential = true;//can't be declined - if someone wants to use our site, must accept this cookie in order to shop on the site. 
+});
+
+
+
+
 //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount =true).AddRoles<IdentityRole>().AddRoleManager < RoleManager < IdentityRole >> ().AddEntityFrameworkStores <ApplicationDbContext > ();
 
 builder.Services.AddControllersWithViews();
@@ -34,6 +47,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+//Shopping cart - Step 1
+//Register session with the app
+//This ALWAYS goes after UseRouting() and BEFORE UseAuthentication()
+app.UseSession();
 
 app.UseAuthentication();
 app.UseAuthorization();
