@@ -13,6 +13,25 @@ namespace ProjName.UI.MVC.Controllers
             _logger = logger;
         }
 
+        
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult Events()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult Menu()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             return View();

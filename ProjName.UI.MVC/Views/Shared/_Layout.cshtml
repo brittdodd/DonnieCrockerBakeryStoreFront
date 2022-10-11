@@ -98,35 +98,36 @@
 							<li class="dropdown active">
 								<a href="@Url.ActionLink("Index", "Home")" title="Portfolio" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
 								<i class="ddl-switch fa fa-angle-down"></i>
-								<ul class="dropdown-menu">	
+								@*<ul class="dropdown-menu">	
 									<li><a href="@Url.ActionLink("Index", "Home")" title="Portfolio grid">Home 1</a></li>
-								</ul>
+								</ul>*@
 							</li>
-							<li class="dropdown">
+							@*<li class="dropdown">
 								<a href="#" title="Pages" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
 								<i class="ddl-switch fa fa-angle-down"></i>
 								<ul class="dropdown-menu">	
 									<li><a href="index-2.html" title="Portfolio grid">Home 1</a></li>
-									<li><a href="about.html" title="About">About us</a></li>
 									<li><a href="services.html" title="Services">Services</a></li>
 									<li><a href="gallery-2.html" title="Gallery">Gallery</a></li>
 								</ul>
-							</li>
-							<li><a href="#menu-section" title="Features">Features</a></li>
-							<li><a href="gallery-2.html" title="Portfolio">Portfolio</a></li>
+							</li>*@
+							@*<li><a href="#menu-section" title="Features">Features</a></li>*@
+								<li><a asp-action="AboutUs" title="AboutUs">About us</a></li>
+							<li><a asp-action="Menu" title="Menu">Menu</a></li>
+							
 							<li class="dropdown">
-								<a href="blog.html" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+								<a asp-action="Events" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
 								<i class="ddl-switch fa fa-angle-down"></i>
-								<ul class="dropdown-menu">	
+								@*<ul class="dropdown-menu">	
 									<li><a href="blog-post.html" title="Blog Post">Blog Post</a></li>
-								</ul>
+								</ul>*@
 							</li>
 							<li class="dropdown">
-								<a href="contact-1.html" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>
+								<a asp-action="Contact" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>
 								<i class="ddl-switch fa fa-angle-down"></i>
-								<ul class="dropdown-menu">	
+								@*<ul class="dropdown-menu">	
 									<li><a href="contact-2.html" title="Contact 2">Contact 2</a></li>
-								</ul>
+								</ul>*@
 							</li>
 						</ul>					
 					</div>
@@ -149,7 +150,7 @@
 				<div class="about-footer">
 					<h3><img src="~/images/Logo3.png" alt="logo"/></h3>
 					<p>The day for a three hour tour a three hour tour then one day he was shooting at some food and up through the ground oil.</p>
-					<a href="contact-2.html" title="Contact" class="about-links">Contact</a>
+					<a asp-action="Contact" title="Contact" class="about-links">Contact</a>
 				</div>
 			</div>
 			

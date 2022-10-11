@@ -18,6 +18,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using ProjName.DATA.EF.models;
+
 
 namespace ProjName.UI.MVC.Areas.Identity.Pages.Account
 {
@@ -97,6 +99,26 @@ namespace ProjName.UI.MVC.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+
+            [Required]
+            [StringLength(50)]
+            public string FirstName { get; set; }
+
+            [Required]
+            [StringLength(50, ErrorMessage = "Cannot exceep 50 characters")]
+            public string LastName { get; set; }
+
+            [StringLength(150, ErrorMessage = "*Cannot exceed 150 characters")]
+            public string? Address { get; set; } 
+            [StringLength(50, ErrorMessage = "Cannot exceep 50 characters")]
+            public string? City { get; set; }
+            [StringLength(2, ErrorMessage = "Cannot exceep 2 characters")]
+            public string? State { get; set; }
+            [StringLength(5, ErrorMessage = "Cannot exceep 5 characters")]
+            public string? Zip { get; set; }
+            [StringLength(24, ErrorMessage = "Cannot exceep 24 characters")]
+            public string? Phone { get; set; }
         }
 
 
@@ -123,6 +145,30 @@ namespace ProjName.UI.MVC.Areas.Identity.Pages.Account
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
+
+
+                    StorefrontContext _context = new StorefrontContext();
+
+
+                    UserDetail userDetail = new UserDetail()
+                    {
+                        
+                        UserId = userId,
+                        FirstName = Input.FirstName,
+                        LastName = Input.LastName,
+                        Address = Input.Address,
+                        City = Input.City,
+                        State = Input.State,
+                        Zip = Input.Zip,
+                        Phone = Input.Phone,
+                    };
+
+                   
+                    _context.UserDetails.Add(userDetail);
+               
+                    _context.SaveChanges();
+
+
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
