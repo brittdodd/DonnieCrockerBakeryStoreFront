@@ -20,7 +20,10 @@ namespace ProjName.DATA.EF.Models//Metadata
     }
 
     [ModelMetadataType(typeof(CategoryMetadata))]
-    public partial class Category { }
+    public partial class Category
+    {
+      
+    }
 
     [ModelMetadataType(typeof(SeasonsMetadata))]
     public partial class Seasons{ }

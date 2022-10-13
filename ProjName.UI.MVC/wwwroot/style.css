@@ -692,11 +692,6 @@ main,footer {
 }
 /* - Header Main */
 .header-main {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 11;
-	right: 0;
 	background-color: rgba(0, 0, 0, 0.702);
 }
 

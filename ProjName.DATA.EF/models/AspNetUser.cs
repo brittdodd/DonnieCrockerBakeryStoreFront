@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProjName.DATA.EF.models
+namespace ProjName.DATA.EF.Models
 {
     public partial class AspNetUser
     {

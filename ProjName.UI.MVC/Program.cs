@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using ProjName.DATA.EF.models;
+using ProjName.DATA.EF.Models;
 using ProjName.UI.MVC.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +10,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddDbContext<StorefrontContext>(options => options.UseSqlServer(connectionString)); 
+builder.Services.AddDbContext<StoreFrontContext>(options => options.UseSqlServer(connectionString)); 
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
