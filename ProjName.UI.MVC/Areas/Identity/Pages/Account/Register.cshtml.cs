@@ -18,7 +18,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-using ProjName.DATA.EF.models;
+using ProjName.DATA.EF.Models;
 
 
 namespace ProjName.UI.MVC.Areas.Identity.Pages.Account
@@ -147,7 +147,7 @@ namespace ProjName.UI.MVC.Areas.Identity.Pages.Account
                     var userId = await _userManager.GetUserIdAsync(user);
 
 
-                    StorefrontContext _context = new StorefrontContext();
+                    StoreFrontContext _context = new StoreFrontContext();
 
 
                     UserDetail userDetail = new UserDetail()

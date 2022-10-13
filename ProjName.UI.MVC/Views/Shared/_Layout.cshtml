@@ -112,24 +112,32 @@
 								</ul>
 							</li>*@
 							@*<li><a href="#menu-section" title="Features">Features</a></li>*@
-								<li><a asp-action="AboutUs" title="AboutUs">About us</a></li>
-							<li><a asp-action="Menu" title="Menu">Menu</a></li>
+								<li><a asp-action="AboutUs" asp-controller="Home" title="AboutUs">About us</a></li>
+							<li><a asp-action="Index" asp-controller="BakeryProducts" title="Menu">Menu</a></li>
 							
 							<li class="dropdown">
-								<a asp-action="Events" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
+								<a asp-action="Events" asp-controller="Home" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
 								<i class="ddl-switch fa fa-angle-down"></i>
 								@*<ul class="dropdown-menu">	
 									<li><a href="blog-post.html" title="Blog Post">Blog Post</a></li>
 								</ul>*@
 							</li>
 							<li class="dropdown">
-								<a asp-action="Contact" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>
+								<a asp-action="Contact" asp-controller="Home" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>
 								<i class="ddl-switch fa fa-angle-down"></i>
 								@*<ul class="dropdown-menu">	
 									<li><a href="contact-2.html" title="Contact 2">Contact 2</a></li>
 								</ul>*@
 							</li>
-						</ul>					
+
+						</ul>		
+						
+						
+						
+						<partial name="_LoginPartial" />
+
+
+
 					</div>
 				</nav><!-- Navigation -->
 			</div>
