@@ -28,10 +28,7 @@
 	margin-right: 12px;
 }
 
-/*.ow-navigation .navbar-brand h3 img {
-	width: 166px;
-	height: 78px;
-}*/
+
 .ow-navigation .navbar-brand  h3 {
 	font-family: 'Dancing Script', cursive;
 	font-size: 32px;
@@ -78,7 +75,7 @@
 .ow-navigation .navbar-nav > li.active > a:focus::after, 
 .ow-navigation .navbar-nav > li.active > a:hover::after,
 .ow-navigation .nav.navbar-nav li > a:hover::after {
-	background-color: #f88c91;
+	background-color: #a553a4;
     content: "";
     height: 18px;
     left: -10px;

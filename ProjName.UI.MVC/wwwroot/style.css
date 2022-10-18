@@ -62,11 +62,14 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 14px;
 	color: #000;
+	padding-left: 20px;
+	padding-right: 20px;
 	overflow-x: hidden;
 }
 img {
     max-width: 100%;
 	height: auto;
+	align
 }
 a {
     outline: 0 !important;
@@ -835,7 +838,7 @@ main,footer {
 }
 
 .header-main .cart > li > a {
-	background-color: #f88c91;
+	background-color: #a553a4;
 	padding: 10px 35px;
 	font-size: 12px;
 	font-weight: 600;
@@ -927,7 +930,7 @@ main,footer {
 	height: 50%;
 }
 .subscribe-section .container {
-	background-color: #ffbb63;
+	background-color: #a553a4;
 	padding: 27px 31px;	
 	position: relative;
 }
@@ -1071,14 +1074,14 @@ main,footer {
 	margin-bottom: 22px;
 }
 .footer-main .footer-content .about-footer a.about-links {
-	color: #fff;
+	color: #a553a4;
 	display: inline-block;
 	font-size: 12px;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 	letter-spacing: 0.84px;
 	padding: 12px 52px;
-	border: 1px solid #fff;
+	border: 1px solid #a553a4;
 	text-decoration: none;
 	text-transform: uppercase;
 	-webkit-transition: all 1s ease 0s;
@@ -1091,9 +1094,8 @@ main,footer {
 	color: #111;
 }
 .footer-main .footer-content .about-footer a.about-links.order {
-	background-color: #59d4f0;
-	border: none;
-	color: #111;
+	background-color: #111;
+	color: #a553a4;
 }
 .footer-main .footer-content .about-footer a.about-links.order:hover {
 	background-color: #fff;
@@ -1358,7 +1360,8 @@ main,footer {
 /* * Page Banner */
 
 .page-banner {
-    background-image: url("images/page-banner.jpg");
+
+    background-image: url("images/awesome.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1370,7 +1373,7 @@ main,footer {
 .page-banner-content h3 {
 	font-family: 'Playball', cursive;
 	font-size: 70px;
-	color: #fff;
+	color: #a553a4;
 	display: inline-block;
 	margin: 0;
 	padding: 100px 0;
@@ -1389,7 +1392,7 @@ main,footer {
 	padding: 0;
 }
 .section-header h3 {
-	color: #f88c91;
+	color: #a553a4;
 	font-family: 'Playball', cursive;
 	font-size: 45px;
 }
@@ -1404,7 +1407,7 @@ main,footer {
 }
 .section-header img {
 	margin-bottom: 28px;
-	margin-top: 28px;
+	/*margin-top: 28px;*/
 }
 .section-header p {
 	color: #777;

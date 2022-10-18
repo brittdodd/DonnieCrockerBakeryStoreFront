@@ -38,7 +38,7 @@ namespace ProjName.UI.MVC.Controllers
                 shoppingCart = JsonConvert.DeserializeObject<Dictionary<int, CartItemViewModel>>(sessionCart);
             }
 
-            return View();
+            return View(shoppingCart);
         }
 
         public IActionResult AddToCart(int id)

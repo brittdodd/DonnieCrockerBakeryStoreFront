@@ -477,11 +477,17 @@
 .menu-section .menu-box:hover {
 	border-left: 4px solid #59d4f0;
 }
+/*Product Image*/
 .menu-section .menu-box img {
+	width: 225px;
+	height: 205px;
 	position: absolute;
+	margin-left: 30px;
+	margin-top: 9px;
 	left: 0px;
 	top: 0;
 }
+/*Product name*/
 .menu-section .menu-box h3 {
 	color: #222;
 	margin-top: 0;
@@ -492,8 +498,9 @@
 	text-transform: uppercase;
 	word-wrap: break-word;
 }
+/*Price*/
 .menu-section .menu-box span {
-	color: #f88c91;
+	color: #a553a4;
 	float: right;
 	font-size: 16px;
 	letter-spacing: 0.64px;
@@ -507,7 +514,7 @@
 }
 
 .menu-section .menu-box a {
-	border: 2px solid #f88c91;
+	border: 2px solid #a553a4;
 	color: #222;
 	display: inline-block;
 	font-family: 'Poppins', sans-serif;
@@ -523,7 +530,7 @@
 	transition: all 1s ease 0s;
 }
 .menu-section .menu-box a:hover {
-	background-color: #f88c91;
+	background-color: #a553a4;
 	color: #fff;
 }
 
@@ -1372,7 +1379,7 @@
 /* - Widget Reviews */
 
 .widget-reviews .item {
-	background-color: #f6f6f6;
+	background-color:#bf61c6;
 	padding: 40px 25px;
 	text-align: center;
 }
@@ -1382,7 +1389,7 @@
 	margin-bottom: 10px;
 }
 .widget-reviews .item p {
-	color: #858473;
+	color: black;
 	font-family: 'Arimo', sans-serif;
 	font-size: 14px;
 	letter-spacing: 0.56px;
@@ -1999,7 +2006,7 @@
 }
 .content-image-block::before {
 	content: "";
-	background-color: rgba(255, 187, 99, 0.902);
+	background-color: #a553a4;
 	position: absolute;
 	left: 15px;
 	right: 15px;
@@ -2388,6 +2395,7 @@
 }
 .contact-us-1 .contact-info p a {
 	color: #777;
+	
 }
 
 .contact-us-1 .contact-detail {

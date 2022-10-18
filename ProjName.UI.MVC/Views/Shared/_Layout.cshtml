@@ -78,7 +78,7 @@
 						<a class="navbar-brand" href="~/" title="Logo"><h3><img src="~/images/Logo3.png" alt="logo"/></h3></a>
 					</div>
 					<div class="add-to-cart">
-						<div class="menu-search">s
+						<div class="menu-search">
 							<div id="sb-search" class="sb-search">
 								<form>
 									<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search" />
@@ -89,7 +89,7 @@
 						</div>
 						<ul class="cart">
 							<li>
-								<a aria-expanded="true" aria-haspopup="true" data-toggle="dropdown" id="cart" class="btn dropdown-toggle" title="Order Online" href="#">Order Online</a>
+								<a aria-expanded="true" aria-haspopup="true" data-toggle="dropdown" id="cart" class="btn dropdown-toggle" title="Order Online" href="@Url.Action("Index", "ShoppingCart")">View Cart</a>
 							</li>
 						</ul>
 					</div>
@@ -98,46 +98,27 @@
 							<li class="dropdown active">
 								<a href="@Url.ActionLink("Index", "Home")" title="Portfolio" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
 								<i class="ddl-switch fa fa-angle-down"></i>
-								@*<ul class="dropdown-menu">	
-									<li><a href="@Url.ActionLink("Index", "Home")" title="Portfolio grid">Home 1</a></li>
-								</ul>*@
+								
 							</li>
-							@*<li class="dropdown">
-								<a href="#" title="Pages" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-								<i class="ddl-switch fa fa-angle-down"></i>
-								<ul class="dropdown-menu">	
-									<li><a href="index-2.html" title="Portfolio grid">Home 1</a></li>
-									<li><a href="services.html" title="Services">Services</a></li>
-									<li><a href="gallery-2.html" title="Gallery">Gallery</a></li>
-								</ul>
-							</li>*@
-							@*<li><a href="#menu-section" title="Features">Features</a></li>*@
+				
 								<li><a asp-action="AboutUs" asp-controller="Home" title="AboutUs">About us</a></li>
 							<li><a asp-action="Index" asp-controller="BakeryProducts" title="Menu">Menu</a></li>
 							
 							<li class="dropdown">
 								<a asp-action="Events" asp-controller="Home" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
 								<i class="ddl-switch fa fa-angle-down"></i>
-								@*<ul class="dropdown-menu">	
-									<li><a href="blog-post.html" title="Blog Post">Blog Post</a></li>
-								</ul>*@
+								
 							</li>
 							<li class="dropdown">
 								<a asp-action="Contact" asp-controller="Home" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>
 								<i class="ddl-switch fa fa-angle-down"></i>
-								@*<ul class="dropdown-menu">	
-									<li><a href="contact-2.html" title="Contact 2">Contact 2</a></li>
-								</ul>*@
+
+								
 							</li>
+							<partial name="_LoginPartial" />
 
 						</ul>		
 						
-						
-						
-						<partial name="_LoginPartial" />
-
-
-
 					</div>
 				</nav><!-- Navigation -->
 			</div>
@@ -194,6 +175,7 @@
 		</div>
 	</div><!-- Bottom Footer /- -->
 
+
 	<!-- JQuery v1.11.3 -->
 	<script src="~/js/jquery.min.js"></script>
 
@@ -205,5 +187,8 @@
 	
 	<!-- Library - Theme JS -->
 	<script src="~/js/functions.js"></script>
+
+	@RenderSection("scripts", false)
+
 </body>
 </html>
