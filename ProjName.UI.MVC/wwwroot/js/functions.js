@@ -270,7 +270,7 @@
 			$.ajax({
 				type: "POST",
 				dataType: "json",
-				url: "contact.php",
+				url: "../_Archive/contact.php",
 				data: mydata,
 				success: function(data) {
 					if( data["type"] == "error" ){

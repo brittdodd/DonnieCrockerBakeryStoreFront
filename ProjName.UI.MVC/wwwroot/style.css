@@ -1376,7 +1376,19 @@ main,footer {
 	color: #a553a4;
 	display: inline-block;
 	margin: 0;
-	padding: 100px 0;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	padding-left: 0;
+}
+.page-banner-content h4 {
+	font-family: 'Playball', cursive;
+	font-size: 70px;
+	color: #a553a4;
+	display: inline-block;
+	margin: 0;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	padding-left: 640px;
 }
 
 /* * Section Header */
